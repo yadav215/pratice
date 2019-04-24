@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  schoolNumber = '1.855.RIDEZUM';
 
-  ngOnInit() {
-  }
+  
 
 }
