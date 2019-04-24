@@ -1,0 +1,64 @@
+.section_basic{
+       width: 100%;
+       float: left;
+       padding-bottom: 20px;
+       overflow: hidden;
+       background-color: #f7f7f7;
+       .outer_box{
+           width: 100%; //80% after mobile
+           height: 100%;
+           .slogan_area{
+               display: flex;
+               align-items: flex-start; // after mobile center
+               justify-content: center;
+              // background: transparent url("../image/map_bkg_new.png") no-repeat left top;
+
+                min-height: unset; //483 after mobile
+                margin-top: 0px; //70 after mobile
+                
+                .text_box{
+                    text-align: center;
+                    position: relative;
+                    z-index: 999;
+                    @media screen and (min-width: 768px) {
+                        text-align: left;
+                    }
+                   
+                }
+                @media screen and (min-width: 768px) {
+                    justify-content: flex-start;
+                    min-height: 483px;
+                    align-items: center;
+                }
+           }
+           @media screen and (min-width: 768px) {
+               width: 80%;
+           }
+       }
+       &.intro{
+        // background: transparent url("../image/banner.png") no-repeat right top; 
+        // background-size: contain;
+        // background-attachment: fixed;
+        .intro_bkg{
+            background: transparent url(../../assets/image/banner.png) no-repeat right top;
+            background-size: contain;
+            background-attachment: fixed;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            display: none; //show on tablet
+            
+            @media screen and (min-width: 768px) {
+                display: block;
+                background-size: auto 300px;
+            }
+            @media screen and (min-width: 1204px) {
+                display: block;
+                background-size: auto 500px;
+            }
+        }
+       }
+       .container_intro{
+           padding-top: 30px;
+       }
+   }

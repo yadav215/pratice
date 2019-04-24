@@ -1,0 +1,51 @@
+ .main_header{
+    background-color: #fff;
+    padding: 20px 0px;
+    box-shadow: 0px 0px -1px 0px rgba(0, 0, 0, 0.75);
+    position: relative;
+    z-index: 99;
+    top: -1px;
+    .manage_height{
+        align-items: center;
+        justify-content: space-between;
+        img{
+            width: 69px !important;
+            height: auto !important;
+            @media screen and (min-width: 420px) {
+                width: 95px !important;
+                height: 41px !important;
+            }
+        }
+        .header_action_panel{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                font-size: 11px;
+            }
+            @media screen and (min-width: 420px) {
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+        .btn{
+            border-radius: 53px;
+            margin: 0px;
+            min-width: 100px; // after mobile 150
+            background-color: transparent;
+            color: #444;
+            margin-left: 15px;
+            border-color: #93c90e;
+            font-size: 12px !important;
+            &:hover{
+                background-color: #93c90e;
+                color: #fff;
+            }
+            @media screen and (min-width: 420px) {
+                min-width: 150px;
+                font-size: 14px !important;
+            }
+        }
+    }
+}

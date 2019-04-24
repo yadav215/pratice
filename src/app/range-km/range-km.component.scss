@@ -1,0 +1,111 @@
+.panel_range_show{
+    width: 100%;
+    display: flex;
+    padding: 20px 0px;
+
+    background-color: #f1f1f1;
+    .range_box_manage{
+        align-items: center;
+        .range_inner_box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap:wrap; //remove after mobile
+            span{
+                width:100%; // unset after mobile
+                display: block; //unset after mobile
+            }
+            @media screen and (min-width: 768px) {
+                flex-wrap:nowrap;
+                span{
+                    width:unset;
+                    display:inline;
+                }
+            }
+        }
+        .big_no{
+            font-size: 28px; //45 after mobile
+            color: #99ca41;
+            font-weight: normal;
+            @media screen and (min-width: 768px) {
+                font-size: 40px;
+            }
+            @media screen and (min-width: 900px) {
+                font-size: 30px;
+            }
+            @media screen and (min-width: 1200px) {
+                font-size: 50px;
+            }
+        }
+        .text_no{
+            font-family: 'Open Sans', sans-serif;
+            /* color: #000; */
+            /* font-weight: normal; */
+            text-align: center; //left after mobile
+            padding-left: 10px;
+            font-size: 11px; //14 after mobile 
+            font-weight: normal; //200 after mobile;
+            @media screen and (min-width: 600px) {
+                font-size: 14px;  
+                font-weight: 200;
+            }
+            
+            @media screen and (min-width: 768px) {
+                font-size: 18px;  
+                font-weight: 200;
+            }
+            @media screen and (min-width: 900px) {
+                font-size: 16px;  
+                font-weight: normal;
+            }
+            @media screen and (min-width: 1200px) {
+                font-size: 20px;  
+                font-weight: 200;
+                text-align: left;
+            }
+            br{
+                display:none; 
+            }
+        }
+        .range_km{
+            width: 50%; //remove after mobelr
+            padding: 0px;
+        }
+        @media screen and (min-width: 768px) {
+            flex-wrap: wrap;
+            .range_km {
+                width: 50%;
+                max-width: 50%;
+            }
+            .range_inner_box{
+                flex-wrap: wrap;
+                span{
+                    width: 100%;
+                }
+                .text_no{
+                    font-size: 14px;
+                }
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            flex-wrap: wrap;
+            .range_km {
+                width: 50%;
+                max-width: 50%;
+            }
+            .range_inner_box{
+                flex-wrap: nowrap;
+                span{
+                    width: unset;
+                }
+               
+                .text_no{
+                    font-size: 18px;
+                    br{
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.footer{
+    background-color: #dcdc22;
+    padding: 10px 0px;
+
+    width: 100%;
+    float: left;
+    .mobile_show{
+         flex-wrap: nowrap;
+     }
+    .social_media{
+        a{
+            margin-right: 10px;
+            img{
+                width: 30px;
+                @media screen and (min-width: 600px) {
+                    width:  auto;
+                }
+            }
+        }
+    }
+    .footer_logo_area{
+        position: relative;
+       
+        .f_logo{
+             position: absolute; 
+             top: -40px;
+             right:10px;
+             img{
+                 width: 50px;
+             }
+            @media screen and (min-width: 768px) {
+                position: absolute; 
+                 top: -40px;
+                 right:10px;
+                 img{
+                     width: 60px;
+                 }
+            }
+        }
+    }
+}

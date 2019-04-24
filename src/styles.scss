@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #f7f7f7;
+}
+.section_basic{
+	width: 100%;
+	float: left;
+}
+
+.btn{
+	border-radius: 53px;
+	margin: 0px;
+	min-width: 150px;
+	font-size: 20px;
+	background-color: #93c90e;
+	color: #fff;
+	border-color: #93c90e;
+	&:hover{
+		background-color: #93c90e;
+		border-color: #93c90e;
+		color: #fff;
+	}
+}
+
+.sub_title{
+        
+	color: #414141;
+	font-size: 20px; //
+	font-weight: normal;
+	padding: 0px;
+	margin: 0px;
+	
+
+	padding-bottom: 20px;
+	line-height: 40px;
+   
+	@media screen and (min-width: 768px) {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	@media screen and (min-width: 1024px) {
+		font-size: 40px;
+		color: #414141;
+		font-weight: 200;
+		font-weight:  200;
+
+		line-height: 1.2;
+		
+	}
+	@media screen and (min-width: 1100px) {
+		font-size: 50px;
+	}
+}
+
+.dotted_unorderList{
+	border-left: 1px dashed #444;
+	list-style: none;
+	padding-left: 10px;
+	padding-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+	li{
+		position: relative;
+		padding-bottom: 10px;
+		font-size: 16px; //after mobile 20px
+		font-weight: normal; // 200 after mobile
+		text-align: left;
+		color: #444;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #444;
+			left: -14px;
+			top: 9px;
+		}
+		@media screen and (min-width: 1024px) {
+			font-size: 18px;
+			font-weight: 200;
+
+		}
+	}
+}

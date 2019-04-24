@@ -1,0 +1,29 @@
+.school_logo{
+    position: relative;
+    z-index: 99999;
+    padding-top: 20px;
+    border-top: 1px solid #c7c7c7;
+    background-color: #f7f7f7;
+
+    .all_logo_box{
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+        .text-center{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 50%;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        img{
+            max-width: 100px !important;
+            @media screen and (min-width: 600px) {
+             max-width: 120px !important;
+            }
+        }
+    }
+}
