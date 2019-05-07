@@ -9,6 +9,11 @@ export class HeaderComponent implements OnInit {
 
   schoolNumber = '1.855.RIDEZUM';
 
+  constructor() { }
+
+  ngOnInit() {
+  }
+
   
 
 }
