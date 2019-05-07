@@ -9,19 +9,26 @@ export class AppComponent {
   title = 'pratice';
 
   menuTitleBar = "i am coming from your app component";
+  showEventValue:string;
 
   primaryMenu = [
     {
       name:"Home",
-      url:"google.com"
+      url:"google.com",
+      schoolStatus: "Private"
     },{
       name:"About Us",
-      url:"google.com"
+      url:"google.com",
+      schoolStatus: "International"
     },{
       name:"Contact Us",
-      url:"google.com"
+      url:"google.com",
+      schoolStatus: "Goverment"
     }
   ]
 
+  schoolInfo(event){
+  this.showEventValue = event;
+  }
  
 }

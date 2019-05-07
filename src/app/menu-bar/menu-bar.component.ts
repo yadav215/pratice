@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output,EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu-bar',
@@ -11,13 +11,17 @@ export class MenuBarComponent implements OnInit {
 
   @Input() appTitle;
 
+  @Output() showSchoolStatus=new EventEmitter();
+  schoolInfo = "i am ready to Zum Drive: Satus ok";
+
+  setSchoolValue(){
+    this.showSchoolStatus.emit(this.schoolInfo);
+  }
+
   constructor() {}
 
   ngOnInit() {
-
-
-
- 
+    
   }
 
 }

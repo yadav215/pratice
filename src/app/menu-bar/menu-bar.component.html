@@ -3,8 +3,8 @@
     <div class="row">
         <div>{{appTitle}}</div>
         <ul>
-          <li *ngFor="let show of appMenu">
-            <a [href]="show.url">{{show.name}}</a>
+          <li (click)="setSchoolValue()" *ngFor="let show of appMenu">
+            {{show.name}}
           </li>
           
         </ul>
