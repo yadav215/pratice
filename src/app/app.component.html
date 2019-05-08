@@ -1,10 +1,10 @@
-<div class="info_bar" *ngIf="true">
+<div class="info_bar">
     <div class="container">
-        <div class="row">{{showEventValue}}</div>
+        <div class="row"></div>
     </div>
 </div>
 <app-header></app-header>
-<app-menu-bar [appMenu]="primaryMenu" [appTitle]="menuTitleBar" (showSchoolStatus)="schoolInfo($event)"></app-menu-bar>
+<app-menu-bar [appMenu]="siteMenu"></app-menu-bar>
 <app-intro-panel></app-intro-panel>
 <app-range-km></app-range-km>
 <app-intro></app-intro>
