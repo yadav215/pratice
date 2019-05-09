@@ -1,0 +1,13 @@
+<section class="menu_bar">
+  <div class="container">
+    <div class="row">
+        <div>{{appTitle}}</div>
+        <ul>
+          <li *ngFor="let menu of storeMenu" (click)="showDetaToParent($event)">
+            {{menu}}
+          </li>
+        </ul>
+    </div>
+  </div>
+  
+</section>

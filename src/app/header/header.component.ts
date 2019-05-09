@@ -7,32 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  schoolNumber = '1.855.RIDEZUM';
+  schoolNumber:string;
 
-  btnValue = "Hide School Value";
 
-  schoolValue: boolean = true;
-  
-
-  changeVlave(){
-    
-    this.schoolValue = !this.schoolValue;
-
-    if(!this.schoolValue) {
-      this.btnValue = "Show School Value";
-    }
-    else{
-      this.btnValue = "Hide School Value";
-    }
-  }
-
-  dummySlogan = "slogan goes here";
-
-  makeYourSlogan(event:Event){
-    this.dummySlogan = (<HTMLInputElement>event.target).value;
-  }
+  constructor() { }
 
   ngOnInit() {
   }
 
+  commboBoxItems = [
+    {
+      items:"Private School",
+      Status: "Status Ok"
+    },{
+      items:"International School",
+      Status: "Status High"
+    },{
+      items:"Govt. School",
+      Status: "Status warning"
+    }
+  ]
+
+  getOutput(event){
+    this.schoolNumber = event.target.value;
+  }
 }

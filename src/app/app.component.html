@@ -1,4 +1,12 @@
+<div class="info_bar">
+    <div class="container">
+        <div class="row">
+            <div class="col">{{childToParent}}</div>
+        </div>
+    </div>
+</div>
 <app-header></app-header>
+<app-menu-bar [rightMenu]="siteMenu" (childToParentMove)="childToParent=$event"></app-menu-bar>
 <app-intro-panel></app-intro-panel>
 <app-range-km></app-range-km>
 <app-intro></app-intro>

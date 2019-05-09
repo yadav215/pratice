@@ -1,0 +1,22 @@
+.menu_bar{
+    width: 100%;
+
+    background-color: #f1f1f1;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        min-height: 50px;
+    }
+    ul{
+        list-style: none;
+        margin-bottom: 0px;
+        li{
+            display: inline-block;
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+        }
+    }
+}

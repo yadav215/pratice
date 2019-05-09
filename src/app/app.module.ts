@@ -11,6 +11,7 @@ import { IntroComponent } from './intro/intro.component';
 import { PartnerComponent } from './partner/partner.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     IntroComponent,
     PartnerComponent,
     ContactFormComponent,
-    FooterComponent
+    FooterComponent,
+    MenuBarComponent
   ],
   imports: [
     BrowserModule,
