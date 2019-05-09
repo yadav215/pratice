@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'pratice';
 
+  childToParent:string;
+
   
 
   siteMenu = ["Home","About Us","Contact Us"];

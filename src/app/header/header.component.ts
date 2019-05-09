@@ -28,22 +28,6 @@ export class HeaderComponent implements OnInit {
   ]
 
   getOutput(event){
-    let showInnerText = event.target.value;
-    //alert(showInnerText);
-
-    if(showInnerText == "Private School"){
-      this.schoolNumber = showInnerText;
-    }
-    else if(showInnerText == "International School"){
-      this.schoolNumber = showInnerText;
-    }
-    else if(showInnerText == "Govt. School"){
-      this.schoolNumber = showInnerText;
-    }
-    else{
-      this.schoolNumber = "please select any option"
-    }
-    
+    this.schoolNumber = event.target.value;
   }
-
 }

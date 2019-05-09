@@ -7,8 +7,17 @@ import { Component, Input, Output,EventEmitter, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
-  @Input() appMenu;
+  @Input("rightMenu") appMenu;
   storeMenu:any;
+
+
+
+  infoTitle:string = "i am coming from child";
+  @Output() childToParentMove = new EventEmitter();
+
+  showDetaToParent(event){
+    this.childToParentMove.emit(this.infoTitle);
+  }
 
   constructor() {}
 
