@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,35 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pratice';
+  titleChange:string = "site status show here";
 
-  childToParent:string;
+  siteMenu = [
+    {
+      menuName:"Home",
+      status: "ok"
+    },{
+      menuName:"About Us",
+      status: "sucsess"
+    },{
+      menuName:"Contact Us",
+      status: "warning"
+    }
+  ];
 
-  
+  contitionMatch:string;
 
-  siteMenu = ["Home","About Us","Contact Us"];
+  constructor(){
+
+  }
+
+  ngOnInit() {
+  }
+
+  showValue(parameters){
+    //console.log("i am coming from app");
+
+    this.titleChange = parameters;
+    this.contitionMatch = parameters;
+    
+  }
 }

@@ -3,8 +3,8 @@
     <div class="row">
         <div>{{appTitle}}</div>
         <ul>
-          <li *ngFor="let menu of storeMenu" (click)="showDetaToParent($event)">
-            {{menu}}
+          <li *ngFor="let menu of storeMenu" (click)="detaSet($event)">
+            {{menu.menuName}}
           </li>
         </ul>
     </div>

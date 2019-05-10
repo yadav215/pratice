@@ -2,5 +2,16 @@
     height: 30px;
     width: 100%;
 
-    background-color: #ECEC4C
+    background-color: #ECEC4C;
+    color: #fff;
+    &.Home{
+        background-color: green;
+    }
+    &.About{
+        background-color: red;
+    }
+    &.Contact{
+        background-color: blue;
+    }
+    
 }

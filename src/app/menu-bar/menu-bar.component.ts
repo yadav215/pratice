@@ -7,19 +7,23 @@ import { Component, Input, Output,EventEmitter, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
+  
+
+
+  constructor() {}
+
+
   @Input("rightMenu") appMenu;
   storeMenu:any;
 
 
+  @Output() changeDeta = new EventEmitter();
 
-  infoTitle:string = "i am coming from child";
-  @Output() childToParentMove = new EventEmitter();
+  detaSet(val){
+    console.log(val);
+    this.changeDeta.emit(val.target.outerText);
 
-  showDetaToParent(event){
-    this.childToParentMove.emit(this.infoTitle);
   }
-
-  constructor() {}
 
   ngOnInit() {
 
