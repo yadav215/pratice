@@ -7,11 +7,7 @@ import { Component, Input, Output,EventEmitter, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
-  
-
-
-  constructor() {}
-
+constructor() {}
 
   @Input("rightMenu") appMenu;
   storeMenu:any;
@@ -26,9 +22,6 @@ export class MenuBarComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.storeMenu =  this.appMenu;
-    
   }
-
 }

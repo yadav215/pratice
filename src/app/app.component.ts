@@ -22,6 +22,8 @@ export class AppComponent {
     }
   ];
 
+ 
+
   contitionMatch:string;
 
   constructor(){
@@ -36,6 +38,15 @@ export class AppComponent {
 
     this.titleChange = parameters;
     this.contitionMatch = parameters;
-    
+
+    if(this.titleChange == 'Home'){
+      this.titleChange = "sucsess";
+    }
+    else if(this.titleChange == 'About Us'){
+      this.titleChange = "Warning";
+    }
+    else if(this.titleChange == 'Contact Us'){
+      this.titleChange = "Critical";
+    }
   }
 }
