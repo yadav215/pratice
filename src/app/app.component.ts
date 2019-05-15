@@ -37,6 +37,5 @@ export class AppComponent {
     console.log("i am coming from app",parameters);
 
     this.titleChange = parameters;
-    this.contitionMatch = this.titleChange.status;
   }
 }
