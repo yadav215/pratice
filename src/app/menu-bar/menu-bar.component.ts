@@ -16,8 +16,8 @@ constructor() {}
   @Output() changeDeta = new EventEmitter();
 
   detaSet(val){
-    console.log(val);
-    this.changeDeta.emit(val.target.outerText);
+    console.log("i am child",val);
+    this.changeDeta.emit(val);
 
   }
 
