@@ -5,8 +5,18 @@
         </div>
     </div>
 </div>
+<div class="container">
+        <div class="row">
+            <div class="chat_box" >
+                <ul>
+                    <li *ngFor="let item of ShowChatMgs">{{item}}</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
 <app-header></app-header>
-<app-menu-bar [rightMenu]="siteMenu" (changeDeta)="showValue($event)" ></app-menu-bar>
+<app-menu-bar [rightMenu]="siteMenu" (changeDeta)="showValue($event)"  (chatmethod)="capture($event)" ></app-menu-bar>
 <app-intro-panel></app-intro-panel>
 <app-range-km></app-range-km>
 <app-intro></app-intro>

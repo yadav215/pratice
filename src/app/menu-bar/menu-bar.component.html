@@ -1,6 +1,14 @@
 <section class="menu_bar">
   <div class="container">
     <div class="row">
+     <div> 
+       
+          <div>
+            <textarea id="text"  #chatValue style="float:right; width: 300px;  margin-bottom: 10px;"></textarea>
+          </div>
+      <button class="btn btn-primary" (click)="getChatValue(chatValue.value)" >Submit</button></div>
+    </div>
+    <div class="row">
         <div>{{appTitle}}</div>
         <ul>
           <li *ngFor="let menu of storeMenu" (click)="detaSet(menu)">

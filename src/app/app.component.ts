@@ -38,4 +38,12 @@ export class AppComponent {
 
     this.titleChange = parameters;
   }
+
+
+
+  ShowChatMgs:any;
+  capture(event){
+    this.ShowChatMgs = event;
+
+  }
 }

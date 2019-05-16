@@ -21,7 +21,30 @@ constructor() {}
 
   }
 
-  ngOnInit() {
+
+  
+
+
+
+  // chat box code
+  @Output() chatmethod = new EventEmitter();
+
+
+  storeChat:any = [];
+
+  getChatValue(event){
+    this.storeChat.push(event);
+
+    this.chatmethod.emit(this.storeChat);
+
+
+    console.log(this.storeChat);
+
+    document.getElementById('text').value = "";
+  }
+
+  
+ ngOnInit() {
     this.storeMenu =  this.appMenu;
   }
 }
