@@ -44,6 +44,12 @@ export class AppComponent {
   ShowChatMgs:any;
   capture(event){
     this.ShowChatMgs = event;
+    console.log("parenttttttttt", event)
 
+  }
+
+  clearChat(){
+    this.ShowChatMgs = [];
+    console.log(this.ShowChatMgs);
   }
 }

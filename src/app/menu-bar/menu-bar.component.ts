@@ -37,12 +37,12 @@ constructor() {}
 
     this.chatmethod.emit(this.storeChat);
 
-
     console.log(this.storeChat);
 
     document.getElementById('text').value = "";
   }
 
+ 
   
  ngOnInit() {
     this.storeMenu =  this.appMenu;
