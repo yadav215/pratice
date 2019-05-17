@@ -9,6 +9,8 @@ export class AppComponent {
   title = 'pratice';
   titleChange:string = "site status show here";
 
+  gender:string;
+
   siteMenu = [
     {
       menuName:"Home",
@@ -49,7 +51,12 @@ export class AppComponent {
   }
 
   clearChat(){
-    this.ShowChatMgs = [];
+    this.ShowChatMgs.length = 0;
     console.log(this.ShowChatMgs);
+  }
+
+
+  genderIcon(event){
+    this.gender = event;
   }
 }

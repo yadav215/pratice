@@ -1,9 +1,9 @@
-import { Component, Input, Output,EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output,EventEmitter, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
-  styleUrls: ['./menu-bar.component.scss']
+  styleUrls: ['./menu-bar.component.scss'],
 })
 export class MenuBarComponent implements OnInit {
 
@@ -28,11 +28,17 @@ constructor() {}
 
   // chat box code
   @Output() chatmethod = new EventEmitter();
-
+  @Output() genderShow = new EventEmitter;
+  
+  getGenderValue(event){
+    this.genderShow.emit(event.target.value);
+    console.log(event.target.value);
+  }
 
   storeChat:any = [];
 
   getChatValue(event){
+    
     this.storeChat.push(event);
 
     this.chatmethod.emit(this.storeChat);
@@ -42,6 +48,8 @@ constructor() {}
     document.getElementById('text').value = "";
   }
 
+
+  
  
   
  ngOnInit() {

@@ -36,7 +36,47 @@
             &:nth-child(odd){
                 text-align: left;
                 color: green;
+                &.female{
+                    background-image: url("https://tontorimcc.com/wp-content/uploads/2011/03/Female-Icon.jpg");
+                    background-size: 15px 15px;
+                    background-position: left center;
+    
+                    padding-left: 20PX;
+                    background-repeat: no-repeat;
+                }
+                &.male{
+                    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRBhqnJCuWUh35K8l7_1p5OjVDstbKk6b-JDPqKa4Io7b3i5pZ");
+                    background-size: 15px 15px;
+                    background-position: left center;
+    
+                    padding-left: 20PX;
+                    background-repeat: no-repeat;
+                }
+                
             }
+            &.female{
+                background-image: url("https://tontorimcc.com/wp-content/uploads/2011/03/Female-Icon.jpg");
+                background-size: 15px 15px;
+                    
+                background-position: right center;
+
+                padding-left: 0px;
+                padding-right:20px ;
+                background-repeat: no-repeat;
+                
+            }
+            &.male{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRBhqnJCuWUh35K8l7_1p5OjVDstbKk6b-JDPqKa4Io7b3i5pZ");
+                background-size: 15px 15px;
+                    
+                background-position: right center;
+
+                padding-left: 0px;
+                padding-right:20px ;
+                background-repeat: no-repeat;
+                
+            }
+           
         }
     }
 
