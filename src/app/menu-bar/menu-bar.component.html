@@ -1,10 +1,25 @@
 <section class="menu_bar">
   <div class="container">
     <div class="row">
+     <div> 
+       
+          <div>
+            <textarea id="text"  #chatValue style="float:right; width: 300px;  margin-bottom: 10px;"></textarea>
+          </div>
+          <div>
+            <input class="gender" (click)="getGenderValue($event)" type="radio" #gender name="gender" value="male">Male &nbsp;&nbsp;&nbsp;&nbsp; 
+            
+            <input class="gender" (click)="getGenderValue($event)" type="radio" #gender name="gender" value="female">Female
+          </div>
+      <button class="btn btn-primary" (click)="getChatValue(chatValue.value)" >Submit</button>
+    </div>
+   
+    </div>
+    <div class="row">
         <div>{{appTitle}}</div>
         <ul>
-          <li *ngFor="let menu of storeMenu" (click)="showDetaToParent($event)">
-            {{menu}}
+          <li *ngFor="let menu of storeMenu" (click)="detaSet(menu)">
+            {{menu.menuName}}
           </li>
         </ul>
     </div>

@@ -2,5 +2,83 @@
     height: 30px;
     width: 100%;
 
-    background-color: #ECEC4C
+    background-color: #ECEC4C;
+    color: #fff;
+    &.ok{
+        background-color: green;
+    }
+    &.sucsess{
+        background-color: red;
+    }
+    &.warning{
+        background-color: blue;
+    }
+    
+}
+
+.chat_box{
+    width: 300px;
+    height: 200px;
+
+    border: 1px solid #444;
+
+    float: right;
+    position: relative;
+    z-index: 999;
+    background-color: #fff;
+    ul{
+        list-style: none;
+        li{
+            font-size: 14px;
+            text-align: right;
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+            &:nth-child(odd){
+                text-align: left;
+                color: green;
+                &.female{
+                    background-image: url("https://tontorimcc.com/wp-content/uploads/2011/03/Female-Icon.jpg");
+                    background-size: 15px 15px;
+                    background-position: left center;
+    
+                    padding-left: 20PX;
+                    background-repeat: no-repeat;
+                }
+                &.male{
+                    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRBhqnJCuWUh35K8l7_1p5OjVDstbKk6b-JDPqKa4Io7b3i5pZ");
+                    background-size: 15px 15px;
+                    background-position: left center;
+    
+                    padding-left: 20PX;
+                    background-repeat: no-repeat;
+                }
+                
+            }
+            &.female{
+                background-image: url("https://tontorimcc.com/wp-content/uploads/2011/03/Female-Icon.jpg");
+                background-size: 15px 15px;
+                    
+                background-position: right center;
+
+                padding-left: 0px;
+                padding-right:20px ;
+                background-repeat: no-repeat;
+                
+            }
+            &.male{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRBhqnJCuWUh35K8l7_1p5OjVDstbKk6b-JDPqKa4Io7b3i5pZ");
+                background-size: 15px 15px;
+                    
+                background-position: right center;
+
+                padding-left: 0px;
+                padding-right:20px ;
+                background-repeat: no-repeat;
+                
+            }
+           
+        }
+    }
+
+    
 }
