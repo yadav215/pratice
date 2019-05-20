@@ -51,25 +51,16 @@ constructor() {}
   storeChat:any = [];
   storeGender:any = [];
 
-
-  
-
- 
-
-
-
   getChatValue(event,genValue){
-    console.log(this.sex);
+    console.log("i am ",this.sex);
 
-  
-   
     this.storeChat.push(event);
     this.storeGender.push(this.sex);
 
     this.chatmethod.emit(this.storeChat);
     this.genderShow.emit(this.storeGender);
 
-    document.getElementById('text').value = "";
+    document.getElementById('text').innerHTML = "";
 
     //`console.log("hheloooo",this.getgenderSex);
   }
