@@ -62,11 +62,8 @@ constructor() {}
 
     document.getElementById('text').innerHTML = "";
 
-<<<<<<< HEAD
-    //document.getElementById('text').value = "";
-=======
+
     //`console.log("hheloooo",this.getgenderSex);
->>>>>>> baf393539baab4dd49a276eb437da439ef26ba35
   }
 
  ngOnInit() {
