@@ -27,8 +27,8 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
