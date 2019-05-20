@@ -57,6 +57,7 @@ export class AppComponent {
 
 
   genderIcon(event){
+    console.log(event);
     this.gender = event;
   }
 }

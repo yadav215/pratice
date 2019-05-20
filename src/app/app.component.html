@@ -9,7 +9,7 @@
         <div class="row">
             <div class="chat_box" >
                 <ul>
-                    <li [ngClass]="gender" *ngFor="let item of ShowChatMgs">{{item}}</li>
+                    <li [ngClass]="gender[i]" *ngFor="let item of ShowChatMgs; let i = index" >{{item}}</li>
                 </ul>
             </div>
             <button class="btn" (click)="clearChat()" style="height: 44px;">Clear Chat</button>
@@ -18,10 +18,10 @@
 
 <app-header></app-header>
 <app-menu-bar [rightMenu]="siteMenu" (changeDeta)="showValue($event)"  (chatmethod)="capture($event)"  (genderShow)="genderIcon($event)" ></app-menu-bar>
-<app-intro-panel></app-intro-panel>
+<!-- <app-intro-panel></app-intro-panel>
 <app-range-km></app-range-km>
 <app-intro></app-intro>
 <app-partner></app-partner>
 <app-contact-form></app-contact-form>
 <app-footer></app-footer>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->

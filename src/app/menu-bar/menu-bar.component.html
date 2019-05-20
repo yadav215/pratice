@@ -7,11 +7,14 @@
             <textarea id="text"  #chatValue style="float:right; width: 300px;  margin-bottom: 10px;"></textarea>
           </div>
           <div>
-            <input class="gender" (click)="getGenderValue($event)" type="radio" #gender name="gender" value="male">Male &nbsp;&nbsp;&nbsp;&nbsp; 
+              <input class="gender" #getgenderSex  type="radio"  name="gender" value="female" [(ngModel)]="sex">Female &nbsp;&nbsp;&nbsp;&nbsp; 
+              <input class="gender" #getgenderSex  type="radio" name="gender" value="male" [(ngModel)]="sex">Male
+              
+            <!-- <input class="gender" (click)="getGenderValue($event)" type="radio" #gender name="gender" value="male">Male &nbsp;&nbsp;&nbsp;&nbsp;  -->
             
-            <input class="gender" (click)="getGenderValue($event)" type="radio" #gender name="gender" value="female">Female
+            <!-- <input class="gender" (click)="getGenderValue($event)" type="radio" #gender name="gender" value="female">Female -->
           </div>
-      <button class="btn btn-primary" (click)="getChatValue(chatValue.value)" >Submit</button>
+      <button class="btn btn-primary" (click)="getChatValue(chatValue.value , getgenderSex.value)" >Submit</button>
     </div>
    
     </div>
