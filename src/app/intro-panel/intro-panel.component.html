@@ -1,12 +1,25 @@
 <section class="main_intro">
-  <div class="view_map"></div>
-  <div class="container bkg_container">
-      <div class="row">
-          <div class="main_slogan_area">
-              <h1>{{mainTitle}}</h1>
-              <div class="sub_title">{{subTitle}}</div>
-              <button class="btn btn-primary" onclick="moveToForm()">Contact Us</button>
-          </div>
-      </div>
-  </div>
+  <table class="table table-strip">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Change Stock Information</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of productInfo let i = index">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.stock}}</td>
+            <td>
+                <input type="number" #stockSetValue   />
+                <button (click)="stockVlaue(i, stockSetValue.value)"  [ngClass]="item.color" class="btn" >Change Stock Value</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
 </section>
