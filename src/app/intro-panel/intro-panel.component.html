@@ -10,7 +10,7 @@
     </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of productInfo let i = index">
+        <tr *ngFor="let item of productInfo let i = index" [ngClass]="item.rowStatus"> 
             <td>{{item.id}}</td>
             <td>{{item.title}}</td>
             <td>{{item.price}}</td>

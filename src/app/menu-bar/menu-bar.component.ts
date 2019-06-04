@@ -22,10 +22,6 @@ constructor() {}
   }
 
 
-  
-
-
-
   // chat box code
   @Output() chatmethod = new EventEmitter();
   @Output() genderShow = new EventEmitter();

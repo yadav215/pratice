@@ -24,8 +24,6 @@ export class AppComponent {
     }
   ];
 
- 
-
   contitionMatch:string;
 
   constructor(){
@@ -37,10 +35,8 @@ export class AppComponent {
 
   showValue(parameters){
     console.log("i am coming from app",parameters);
-
     this.titleChange = parameters;
   }
-
 
 
   ShowChatMgs:any;
@@ -55,9 +51,27 @@ export class AppComponent {
     console.log(this.ShowChatMgs);
   }
 
-
   genderIcon(event){
     console.log(event);
     this.gender = event;
+  }
+
+  productStatusName:string;
+  productStatusValue:any;
+  stockChecking:string;
+  
+  statusProductName(event){
+    this.productStatusName = event;
+  }
+  
+  statusProductStock(event){
+    this.productStatusValue = event;
+
+    if(event > 9){
+      this.stockChecking = "good";
+    }
+    else{
+      this.stockChecking = "bad";
+    }
   }
 }
