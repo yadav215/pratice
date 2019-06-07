@@ -19,7 +19,15 @@
    
     </div>
     <div class="row">
-        <div>Your product Status Goes Here</div>
+        <div>
+         
+          <span>{{getEmpObjValue.name}}</span><br>
+          <span>{{getEmpObjValue.city}}</span><br>
+          <span>{{getEmpObjValue.age}}</span>
+
+          <input type="text" [(ngModel)]="getEmpId">
+          <button (click)="getEmpDetail()" >click me</button>
+        </div>
         <ul>
           <li *ngFor="let menu of storeMenu" (click)="detaSet(menu)">
             {{menu.menuName}}

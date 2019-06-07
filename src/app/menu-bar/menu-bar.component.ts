@@ -1,14 +1,25 @@
 import { Component, Input, Output,EventEmitter, OnInit, ViewEncapsulation } from '@angular/core';
+import { MyServiceService } from '../my-service.service';
 
 @Component({
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
   styleUrls: ['./menu-bar.component.scss'],
+  providers:[MyServiceService],
 })
 export class MenuBarComponent implements OnInit {
 
-constructor() {}
+  
+  getEmpObjValue:any;
+  getEmpId:any;
 
+constructor(private empService:MyServiceService) {
+  
+}
+
+public getEmpDetail(getEmpId):void{
+  this.getEmpObjValue = this.empService.getEmp(this.getEmpId);
+}
   @Input("rightMenu") appMenu;
   storeMenu:any;
 
@@ -59,7 +70,7 @@ constructor() {}
     document.getElementById('text').innerHTML = "";
 
 
-    //`console.log("hheloooo",this.getgenderSex);
+    console.log(this.storeChat);
   }
 
  ngOnInit() {
