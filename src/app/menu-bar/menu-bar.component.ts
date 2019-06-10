@@ -5,20 +5,27 @@ import { MyServiceService } from '../my-service.service';
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
   styleUrls: ['./menu-bar.component.scss'],
-  providers:[MyServiceService],
 })
 export class MenuBarComponent implements OnInit {
 
   
-  getEmpObjValue:any;
-  getEmpId:any;
+  getEmpObjValue:any = [];
 
-constructor(private empService:MyServiceService) {
+
+  constructor(private empService:MyServiceService) {
+
   
 }
 
-public getEmpDetail(getEmpId):void{
-  this.getEmpObjValue = this.empService.getEmp(this.getEmpId);
+// public getEmpDetail(getEmpId):void{
+//   this.getEmpObjValue = this.empService.getEmp(this.getEmpId);
+// }
+
+
+public getAllName(){
+
+  this.getEmpObjValue = this.empService.getEmp();
+
 }
   @Input("rightMenu") appMenu;
   storeMenu:any;

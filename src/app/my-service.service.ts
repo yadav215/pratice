@@ -25,17 +25,31 @@ export class MyServiceService {
     }
   ];
 
-  public getEmp(id:string):any{
+  // public getEmp(id:string):any{
 
-    let employee:any;
+  //   let employee:any;
+
+  //   for(let i=0;i<this.EmpRecord.length;i++){
+  //     if(id === this.EmpRecord[i].id){
+  //       employee = this.EmpRecord[i];
+  //       break;
+  //     }
+  //   }
+  //   return employee;
+  // }
+
+  public getEmp():any{
+
+    let employee:any = [];
+ 
 
     for(let i=0;i<this.EmpRecord.length;i++){
-      if(id === this.EmpRecord[i].id){
-        employee = this.EmpRecord[i];
-        break;
-      }
+      employee.push(this.EmpRecord[i]);
     }
+    console.log("------",employee);
     return employee;
+
+    
   }
 
   constructor() { }

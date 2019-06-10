@@ -12,6 +12,8 @@ import { PartnerComponent } from './partner/partner.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { MyServiceService } from './my-service.service';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

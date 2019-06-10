@@ -19,14 +19,22 @@
    
     </div>
     <div class="row">
-        <div>
-         
-          <span>{{getEmpObjValue.name}}</span><br>
-          <span>{{getEmpObjValue.city}}</span><br>
-          <span>{{getEmpObjValue.age}}</span>
+        <!-- <div>
+          <span>{{getEmpObjValue.id}}</span>&nbsp;&nbsp;
+          <span>{{getEmpObjValue.name}}</span>&nbsp;&nbsp;
+          <span>{{getEmpObjValue.city}}</span>&nbsp;&nbsp;
+          <span>{{getEmpObjValue.age}}</span><br><br>
 
           <input type="text" [(ngModel)]="getEmpId">
           <button (click)="getEmpDetail()" >click me</button>
+        </div> -->
+        <div>
+
+          <div *ngFor="let objkey of getEmpObjValue let i = index">
+
+            <span>{{objkey.id}}</span>: <span>{{objkey.name}}</span>:<span>{{objkey.age}}</span>:<span>{{objkey.city}}</span>
+          </div>
+          <button (click)="getAllName()" >click me</button>
         </div>
         <ul>
           <li *ngFor="let menu of storeMenu" (click)="detaSet(menu)">
