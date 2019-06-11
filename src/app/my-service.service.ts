@@ -38,18 +38,24 @@ export class MyServiceService {
   //   return employee;
   // }
 
-  public getEmp():any{
 
-    let employee:any = [];
+
+  // public getEmp():any{
+
+  //   let employee:any = [];
  
 
-    for(let i=0;i<this.EmpRecord.length;i++){
-      employee.push(this.EmpRecord[i]);
-    }
-    console.log("------",employee);
-    return employee;
+  //   for(let i=0;i<this.EmpRecord.length;i++){
+  //     employee.push(this.EmpRecord[i]);
+  //   }
+  //   console.log("------",employee);
+  //   return employee;
 
     
+  // }
+
+  public getJason(){
+    return this.EmpRecord;
   }
 
   constructor() { }

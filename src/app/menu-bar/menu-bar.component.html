@@ -30,11 +30,21 @@
         </div> -->
         <div>
 
-          <div *ngFor="let objkey of getEmpObjValue let i = index">
+          <!-- <div *ngFor="let objkey of getEmpObjValue let i = index">
 
             <span>{{objkey.id}}</span>: <span>{{objkey.name}}</span>:<span>{{objkey.age}}</span>:<span>{{objkey.city}}</span>
+            
+          </div> -->
+
+          <div *ngFor="let jason of getEmpObjValue let i =index">
+          
+              <span>ID: </span> <span>{{getEmpObjValue[i].id}}</span>  <span>Name: </span> <span>{{getEmpObjValue[i].name}}</span>  <span>Age: </span> <span>{{getEmpObjValue[i].age}}</span>  <span>City: </span> <span>{{getEmpObjValue[i].city}}</span>
+          
+            <div>
+             
+            </div>
           </div>
-          <button (click)="getAllName()" >click me</button>
+          <button (click)="getAllJasonData()" >Get Json Formate</button>
         </div>
         <ul>
           <li *ngFor="let menu of storeMenu" (click)="detaSet(menu)">

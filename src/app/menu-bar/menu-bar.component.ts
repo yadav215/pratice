@@ -9,7 +9,7 @@ import { MyServiceService } from '../my-service.service';
 export class MenuBarComponent implements OnInit {
 
   
-  getEmpObjValue:any = [];
+  getEmpObjValue = {};
 
 
   constructor(private empService:MyServiceService) {
@@ -22,10 +22,19 @@ export class MenuBarComponent implements OnInit {
 // }
 
 
-public getAllName(){
+// public getAllName(){
 
-  this.getEmpObjValue = this.empService.getEmp();
+//   this.getEmpObjValue = this.empService.getEmp();
 
+// }
+
+
+public getAllJasonData(){
+  this.getEmpObjValue = this.empService.getJason();
+
+  console.log("--=========",this.getEmpObjValue);
+
+ 
 }
   @Input("rightMenu") appMenu;
   storeMenu:any;
