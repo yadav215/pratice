@@ -36,9 +36,9 @@
             
           </div> -->
 
-          <div *ngFor="let jason of getEmpObjValue let i =index">
+          <div *ngFor="let jason of getEmpObjValue let i =index" class="table json_table">
           
-              <span>ID: </span> <span>{{getEmpObjValue[i].id}}</span>  <span>Name: </span> <span>{{getEmpObjValue[i].name}}</span>  <span>Age: </span> <span>{{getEmpObjValue[i].age}}</span>  <span>City: </span> <span>{{getEmpObjValue[i].city}}</span>
+              <span>ID: </span> <span>{{getEmpObjValue[i].id | uppercase}}</span>  <span>Name: </span> <span>{{getEmpObjValue[i].name}}</span>  <span>Age: </span> <span>{{getEmpObjValue[i].age}}</span>  <span>City: </span> <span>{{getEmpObjValue[i].city}}</span>
           
             <div>
              
